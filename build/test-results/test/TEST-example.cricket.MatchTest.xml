@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="example.cricket.MatchTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2021-09-21T10:41:26" hostname="Chetans-MacBook-Pro.local" time="0.027">
+  <properties/>
+  <testcase name="shouldReturnFalseIfHitterBatsmanLost()" classname="example.cricket.MatchTest" time="0.023"/>
+  <testcase name="shouldReturnTrueIfBatsmanWon()" classname="example.cricket.MatchTest" time="0.001"/>
+  <testcase name="shouldReturnFalseIfBatsmanLost()" classname="example.cricket.MatchTest" time="0.001"/>
+  <testcase name="shouldReturnTrueIfHitterBatsmanWon()" classname="example.cricket.MatchTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

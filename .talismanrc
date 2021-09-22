@@ -1,0 +1,3 @@
+fileignoreconfig:
+- filename: .idea/uiDesigner.xml
+  checksum: 18be3885953534e90388d323127b1e8a412d666d9fe4c4b2f315c589933b5f67

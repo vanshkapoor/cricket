@@ -9,17 +9,25 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class BatsmanTest {
     @Test
-    void CheckRunLessThanEqualTo6() {
-        Batsman batsman = new Batsman(BatsmanType.NORMAL);
+    void shouldReturnRunsScoredBetweenZeroAndSixWhenBatsmanIsNormal() {
+        Batsman batsman = new NormalBatsman();
         int currentRun = batsman.bat();
         assertTrue(currentRun <= 6 && currentRun >= 0);
     }
 
     @Test
-    void shouldReturnRunsScoredWhenBatsmanIsHitter() {
-        Batsman batsman = new Batsman(BatsmanType.HITTER);
+    void shouldReturnRunsScoredZeroOrFourOrSixWhenBatsmanIsHitter() {
+        Batsman batsman = new HitterBatsman();
         int currentRun = batsman.bat();
         List<Integer> expectedRuns = Arrays.asList(0, 4, 6);
+        assertTrue(expectedRuns.contains(currentRun));
+    }
+
+    @Test
+    void shouldReturnRunsScoredBetweenZeroAndThreeWhenBatsmanIsDefensive() {
+        Batsman batsman = new HitterBatsman();
+        int currentRun = batsman.bat();
+        List<Integer> expectedRuns = Arrays.asList(0, 1, 2, 3);
         assertTrue(expectedRuns.contains(currentRun));
     }
 }

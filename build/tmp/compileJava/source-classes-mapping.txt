@@ -1,8 +1,16 @@
 example/cricket/Bowler.java
  example.cricket.Bowler
-example/cricket/BatsmanType.java
- example.cricket.BatsmanType
 example/cricket/Match.java
  example.cricket.Match
+example/cricket/BatsmanType.java
+ example.cricket.BatsmanType
+ example.cricket.BatsmanType$1
+ example.cricket.BatsmanType$2
 example/cricket/Batsman.java
  example.cricket.Batsman
+example/cricket/NormalBatsman.java
+ example.cricket.NormalBatsman
+example/cricket/HitterBatsman.java
+ example.cricket.HitterBatsman
+example/cricket/DefensiveBatsman.java
+ example.cricket.DefensiveBatsman

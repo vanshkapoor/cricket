@@ -16,7 +16,7 @@ public class Match {
         this.batsman = batsman;
     }
 
-    public void playOver() {
+    public void playMatch() {
         int ballsThrown = 0;
         int sum = 0;
         if (!isBatsmanWon()) {

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="example.cricket.MatchTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-09-22T05:01:01" hostname="Chetans-MacBook-Pro.local" time="0.143">
+<testsuite name="example.cricket.MatchTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-09-22T05:29:46" hostname="Chetans-MacBook-Pro.local" time="0.267">
   <properties/>
-  <testcase name="shouldReturnFalseIfBatsmanOutBeforeCompletingTarget()" classname="example.cricket.MatchTest" time="0.136"/>
-  <testcase name="shouldReturnFalseIfBatsmanCouldNotChaseTarget()" classname="example.cricket.MatchTest" time="0.001"/>
-  <testcase name="shouldReturnTrueIfBatsmanWon()" classname="example.cricket.MatchTest" time="0.005"/>
+  <testcase name="shouldReturnFalseIfBatsmanOutBeforeCompletingTarget()" classname="example.cricket.MatchTest" time="0.248"/>
+  <testcase name="shouldReturnFalseIfBatsmanCouldNotChaseTarget()" classname="example.cricket.MatchTest" time="0.003"/>
+  <testcase name="shouldReturnTrueIfBatsmanWon()" classname="example.cricket.MatchTest" time="0.014"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

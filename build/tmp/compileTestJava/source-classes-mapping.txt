@@ -1,4 +1,4 @@
-example/cricket/BatsmanTest.java
- example.cricket.BatsmanTest
 example/cricket/MatchTest.java
  example.cricket.MatchTest
+example/cricket/BatsmanTest.java
+ example.cricket.BatsmanTest

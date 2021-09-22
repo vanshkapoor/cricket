@@ -14,14 +14,15 @@ public class MatchTest {
         Batsman mockBatsman = Mockito.mock(NormalBatsman.class);
         Match match = new Match(10, 2, mockBatsman, mockBowler);
 
+
         when(mockBatsman.bat()).thenReturn(2);
         when(mockBatsman.bat()).thenReturn(3);
 
-        match.playOver();
-        boolean batsmanWon = match.isBatsmanWon();
+        match.playMatch();
 
-        assertTrue(batsmanWon);
+        assertTrue(match.isBatsmanWon());
     }
+
     @Test
     void shouldReturnFalseIfBatsmanCouldNotChaseTarget() {
         Bowler mockBowler = Mockito.mock(Bowler.class);
@@ -29,11 +30,10 @@ public class MatchTest {
         Match match = new Match(50, 2, mockBatsman, mockBowler);
 
         when(mockBatsman.bat()).thenReturn(2);
-        when(mockBowler.bowl()).thenReturn(2);
+        when(mockBowler.bowl()).thenReturn(1);
 
-        match.playOver();
-        boolean batsmanWon = match.isBatsmanWon();
-        assertFalse(batsmanWon);
+        match.playMatch();
+        assertFalse(match.isBatsmanWon());
     }
 
     @Test
@@ -45,10 +45,8 @@ public class MatchTest {
         when(mockBatsman.bat()).thenReturn(2);
         when(mockBowler.bowl()).thenReturn(2);
 
-        match.playOver();
-        boolean batsmanWon = match.isBatsmanWon();
-        assertFalse(batsmanWon);
+        match.playMatch();
+
+        assertFalse(match.isBatsmanWon());
     }
-
-
 }

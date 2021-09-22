@@ -18,7 +18,7 @@ public class MatchTest {
         when(mockBatsman.bat()).thenReturn(2);
         when(mockBatsman.bat()).thenReturn(3);
 
-        match.playMatch();
+        match.play();
 
         assertTrue(match.isBatsmanWon());
     }
@@ -32,7 +32,7 @@ public class MatchTest {
         when(mockBatsman.bat()).thenReturn(2);
         when(mockBowler.bowl()).thenReturn(1);
 
-        match.playMatch();
+        match.play();
         assertFalse(match.isBatsmanWon());
     }
 
@@ -45,7 +45,21 @@ public class MatchTest {
         when(mockBatsman.bat()).thenReturn(2);
         when(mockBowler.bowl()).thenReturn(2);
 
-        match.playMatch();
+        match.play();
+
+        assertFalse(match.isBatsmanWon());
+    }
+
+    @Test
+    void shouldReturnTrueIfBatsmanwinForPArtTimeBowler() {
+        Bowler mockBowler = Mockito.mock(Bowler.class);
+        Batsman mockBatsman = Mockito.mock(Batsman.class);
+        Match match = new Match(5, 2, mockBatsman, mockBowler);
+
+        when(mockBatsman.bat()).thenReturn(2);
+        when(mockBowler.bowl()).thenReturn(2);
+
+        match.play();
 
         assertFalse(match.isBatsmanWon());
     }

@@ -16,15 +16,21 @@ public class Match {
         this.batsman = batsman;
     }
 
-    public void playMatch() {
+    public void play() {
         int ballsThrown = 0;
         int sum = 0;
+
         if (!isBatsmanWon()) {
             while (ballsThrown < 6 * numberOfOvers) {
                 int runsByBatsman = batsman.bat();
                 int runsByBowler = bowler.bowl();
-                if (isBatsmanOut(runsByBatsman, runsByBowler)) break;
-                sum += runsByBatsman;
+                if (isBatsmanOut(runsByBatsman, runsByBowler) && bowler.bowlertype == BowlerType.FullTime) {
+                    break;
+                } else if (isBatsmanOut(runsByBatsman, runsByBowler) && bowler.bowlertype == BowlerType.PartTime) {
+                    continue;
+                } else {
+                    sum += runsByBatsman;
+                }
                 ballsThrown++;
             }
         }
